@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Start Your Plan | East Street Foundation{% endblock %}
+{% block meta_description %}Start your estate planning inquiry with East Street Foundation. Submit your details and we will contact you about wills, trusts, and related documents.{% endblock %}
+{% block og_title %}Start Your Estate Planning Inquiry{% endblock %}
+{% block og_description %}Complete the inquiry form and East Street Foundation will contact you soon.{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container" data-reveal>
+        <p class="eyebrow">Start Your Plan</p>
+        <h1>Start Your Estate Planning Inquiry</h1>
+        <p>Complete the form below and we will contact you about your estate planning needs.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container form-container" data-reveal>
+        <form method="post" class="start-plan-form" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="first_name">First Name *</label>
+                    <input type="text" id="first_name" name="first_name" required value="{{ form_data.first_name }}" autocomplete="given-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name *</label>
+                    <input type="text" id="last_name" name="last_name" required value="{{ form_data.last_name }}" autocomplete="family-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required value="{{ form_data.email }}" autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required value="{{ form_data.phone }}" autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" value="{{ form_data.city }}" autocomplete="address-level2">
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" value="{{ form_data.state }}" autocomplete="address-level1">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service">
+                        {% set service = form_data.service %}
+                        <option value="Basic Will Package" {% if service == 'Basic Will Package' %}selected{% endif %}>Basic Will Package</option>
+                        <option value="Family Will Package" {% if service == 'Family Will Package' %}selected{% endif %}>Family Will Package</option>
+                        <option value="Living Trust Package" {% if service == 'Living Trust Package' %}selected{% endif %}>Living Trust Package</option>
+                        <option value="Complete Estate Plan" {% if service == 'Complete Estate Plan' %}selected{% endif %}>Complete Estate Plan</option>
+                        <option value="Power of Attorney" {% if service == 'Power of Attorney' %}selected{% endif %}>Power of Attorney</option>
+                        <option value="Healthcare Directive" {% if service == 'Healthcare Directive' %}selected{% endif %}>Healthcare Directive</option>
+                        <option value="Not Sure Yet" {% if service == 'Not Sure Yet' %}selected{% endif %}>Not Sure Yet</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred_contact">Preferred Contact Method</label>
+                    <select id="preferred_contact" name="preferred_contact">
+                        {% set preferred = form_data.preferred_contact %}
+                        <option value="Email" {% if preferred == 'Email' %}selected{% endif %}>Email</option>
+                        <option value="Phone" {% if preferred == 'Phone' %}selected{% endif %}>Phone</option>
+                        <option value="Text" {% if preferred == 'Text' %}selected{% endif %}>Text</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5">{{ form_data.message }}</textarea>
+                </div>
+
+                <div class="honeypot-field" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" value="{{ form_data.website }}">
+                </div>
+
+                <div class="form-group full-width consent-group">
+                    <label for="consent" class="checkbox-label">
+                        <input type="checkbox" id="consent" name="consent" {% if form_data.consent %}checked{% endif %}>
+                        <span>I agree to be contacted by East Street Foundation regarding my inquiry.</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" data-submit-btn>Submit Inquiry</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Pricing | East Street Foundation{% endblock %}
+{% block meta_description %}Review simple, transparent estate planning package pricing from East Street Foundation and choose the support that fits your needs.{% endblock %}
+{% block og_title %}Simple, Transparent Pricing{% endblock %}
+{% block og_description %}Choose the estate planning package that fits your needs.{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container" data-reveal>
+        <p class="eyebrow">Pricing</p>
+        <h1>Simple, Transparent Pricing</h1>
+        <p>Choose the estate planning package that fits your needs.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container card-grid grid-2 pricing-grid-full">
+        <article class="card pricing-card" data-reveal>
+            <h2>Basic Will Package</h2>
+            <p class="price">Starting at $___</p>
+            <p class="muted"><strong>Best for:</strong> Individuals who need a simple will.</p>
+            <ul class="feature-list compact">
+                <li>Basic will preparation</li>
+                <li>Beneficiary information</li>
+                <li>Executor designation</li>
+                <li>Signing guidance</li>
+            </ul>
+            <a class="btn btn-secondary" href="{{ url_for('start_plan') }}">Inquire About Basic Will</a>
+        </article>
+
+        <article class="card pricing-card" data-reveal>
+            <h2>Family Will Package</h2>
+            <p class="price">Starting at $___</p>
+            <p class="muted"><strong>Best for:</strong> Couples, parents, and families.</p>
+            <ul class="feature-list compact">
+                <li>Individual or couple wills</li>
+                <li>Guardianship considerations</li>
+                <li>Family asset planning checklist</li>
+                <li>Signing guidance</li>
+            </ul>
+            <a class="btn btn-secondary" href="{{ url_for('start_plan') }}">Inquire About Family Will</a>
+        </article>
+
+        <article class="card pricing-card" data-reveal>
+            <h2>Living Trust Package</h2>
+            <p class="price">Starting at $___</p>
+            <p class="muted"><strong>Best for:</strong> Homeowners and families who want more control.</p>
+            <ul class="feature-list compact">
+                <li>Living trust preparation support</li>
+                <li>Successor trustee planning</li>
+                <li>Asset transfer checklist</li>
+                <li>Trust funding guidance</li>
+            </ul>
+            <a class="btn btn-secondary" href="{{ url_for('start_plan') }}">Inquire About Living Trust</a>
+        </article>
+
+        <article class="card pricing-card" data-reveal>
+            <h2>Complete Estate Plan</h2>
+            <p class="price">Starting at $___</p>
+            <p class="muted"><strong>Best for:</strong> People who want a more complete planning package.</p>
+            <ul class="feature-list compact">
+                <li>Will</li>
+                <li>Trust</li>
+                <li>Power of attorney</li>
+                <li>Healthcare directive</li>
+                <li>Document review checklist</li>
+            </ul>
+            <a class="btn btn-secondary" href="{{ url_for('start_plan') }}">Inquire About Complete Plan</a>
+        </article>
+    </div>
+
+    <div class="container centered-copy pricing-note" data-reveal>
+        <p>
+            Prices may vary depending on complexity, state requirements, document needs,
+            and whether attorney review is required.
+        </p>
+        <p><strong>Not sure which package fits? Start with a free inquiry.</strong></p>
+        <a class="btn btn-primary" href="{{ url_for('start_plan') }}">Start Free Inquiry</a>
+    </div>
+</section>
+{% endblock %}

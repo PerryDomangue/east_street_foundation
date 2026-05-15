@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy | East Street Foundation{% endblock %}
+{% block meta_description %}Read the East Street Foundation privacy policy describing what form information is collected, how it is used, and how it is protected.{% endblock %}
+{% block og_title %}Privacy Policy{% endblock %}
+{% block og_description %}How East Street Foundation collects, uses, and protects inquiry information.{% endblock %}
+
+{% block content %}
+<section class="page-hero legal-hero">
+    <div class="container" data-reveal>
+        <h1>Privacy Policy</h1>
+    </div>
+</section>
+
+<section class="section legal-page">
+    <div class="container" data-reveal>
+        <h2>Information We Collect</h2>
+        <p>
+            East Street Foundation collects information submitted through our inquiry form, including your name,
+            email address, phone number, location, service interests, and any message details you choose to provide.
+        </p>
+
+        <h2>How We Use Information</h2>
+        <p>
+            We use your information to respond to your inquiry, communicate about estate planning services,
+            and improve the quality of our client support process.
+        </p>
+
+        <h2>No Sale of Personal Information</h2>
+        <p>East Street Foundation does not sell personal information submitted through this website.</p>
+
+        <h2>Information Security</h2>
+        <p>
+            We use reasonable administrative and technical safeguards to protect submitted information.
+            No online method is entirely risk free, but we work to maintain secure handling practices.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            For privacy-related questions, please contact us at
+            <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.
+        </p>
+    </div>
+</section>
+{% endblock %}

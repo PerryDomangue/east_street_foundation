@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Terms of Use | East Street Foundation{% endblock %}
+{% block meta_description %}Review East Street Foundation website terms, including user responsibilities, limitation statements, and legal notice details.{% endblock %}
+{% block og_title %}Terms of Use{% endblock %}
+{% block og_description %}Important terms and conditions for using the East Street Foundation website.{% endblock %}
+
+{% block content %}
+<section class="page-hero legal-hero">
+    <div class="container" data-reveal>
+        <h1>Terms of Use</h1>
+    </div>
+</section>
+
+<section class="section legal-page">
+    <div class="container" data-reveal>
+        <h2>Website Use</h2>
+        <p>
+            By using this website, you agree to use it only for lawful purposes and in a way that does not
+            interfere with the rights or use of others.
+        </p>
+
+        <h2>No Guarantee of Legal Outcome</h2>
+        <p>
+            Information and services described on this website are offered for informational and planning support purposes.
+            East Street Foundation does not guarantee any specific legal outcome.
+        </p>
+
+        <h2>User Responsibility</h2>
+        <p>
+            You are responsible for providing accurate, complete, and current information during any inquiry or intake process.
+        </p>
+
+        <h2>Limitation of Liability</h2>
+        <p>
+            To the fullest extent permitted by applicable law, East Street Foundation is not liable for damages arising from use of,
+            or inability to use, this website or related informational content.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            Questions about these terms may be directed to
+            <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.
+        </p>
+    </div>
+</section>
+{% endblock %}

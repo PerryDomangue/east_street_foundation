@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Services | East Street Foundation Estate Planning{% endblock %}
+{% block meta_description %}Explore East Street Foundation services for wills, trusts, power of attorney, healthcare directives, and complete estate planning packages.{% endblock %}
+{% block og_title %}Estate Planning Services{% endblock %}
+{% block og_description %}Practical estate planning support for individuals, families, and property owners.{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container" data-reveal>
+        <p class="eyebrow">Estate Planning Services</p>
+        <h1>Our Services</h1>
+        <p>Practical estate planning support for individuals, families, and property owners.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container card-grid grid-2 services-grid">
+        <article class="card" data-reveal>
+            <h2>Last Will and Testament</h2>
+            <p>
+                A will helps explain how your property should be distributed, who should handle your estate,
+                and how your final wishes should be followed.
+            </p>
+            <ul class="feature-list compact">
+                <li>Beneficiary planning</li>
+                <li>Executor naming</li>
+                <li>Guardianship considerations</li>
+                <li>Final wishes</li>
+            </ul>
+        </article>
+
+        <article class="card" data-reveal>
+            <h2>Living Trust</h2>
+            <p>
+                A living trust can help organize assets, create a smoother transfer process,
+                and give families more control over estate matters.
+            </p>
+            <ul class="feature-list compact">
+                <li>Trust creation support</li>
+                <li>Asset planning checklist</li>
+                <li>Successor trustee planning</li>
+                <li>Family legacy organization</li>
+            </ul>
+        </article>
+
+        <article class="card" data-reveal>
+            <h2>Power of Attorney</h2>
+            <p>
+                Power of attorney documents help someone you trust make financial or legal decisions
+                if you are unable to do so.
+            </p>
+        </article>
+
+        <article class="card" data-reveal>
+            <h2>Healthcare Directive</h2>
+            <p>
+                Healthcare planning documents help communicate medical preferences and decision-making authority.
+            </p>
+        </article>
+
+        <article class="card full-width" data-reveal>
+            <h2>Complete Estate Planning Package</h2>
+            <p>
+                A full package for people who want a more complete estate plan in one organized process.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container centered-copy" data-reveal>
+        <h2>Not Sure What You Need?</h2>
+        <p>
+            If you are unsure where to start, submit a free inquiry and we will help you understand
+            which package may fit your situation.
+        </p>
+        <a class="btn btn-primary" href="{{ url_for('start_plan') }}">Ask a Question</a>
+    </div>
+</section>
+{% endblock %}

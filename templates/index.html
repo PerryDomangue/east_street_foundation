@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block title %}East Street Foundation | Wills, Trusts, and Estate Planning Support{% endblock %}
+{% block meta_description %}East Street Foundation helps individuals and families prepare wills, trusts, and estate planning documents with clarity and confidence.{% endblock %}
+{% block og_title %}Protect Your Family With East Street Foundation{% endblock %}
+{% block og_description %}Prepare wills, trusts, and essential estate documents with confidence, clarity, and family-focused support.{% endblock %}
+
+{% block content %}
+<section class="hero hero-home" aria-label="Estate planning hero section">
+    <div class="hero-slideshow" data-slideshow>
+        {% set slide_alts = [
+            "Family spending time together at home",
+            "Professional estate planning consultation",
+            "House keys on estate paperwork",
+            "Parent and child sharing a quiet moment",
+            "Signing important legacy documents",
+            "Estate planning documents prepared for review"
+        ] %}
+        {% for slide in slideshow_images %}
+            <img
+                src="{{ url_for('static', filename='images/' ~ slide) }}"
+                alt="{{ slide_alts[loop.index0] if loop.index0 < slide_alts|length else 'Estate planning image ' ~ loop.index }}"
+                class="slide{% if loop.first %} active{% endif %}"
+                loading="{% if loop.first %}eager{% else %}lazy{% endif %}"
+            >
+        {% endfor %}
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content" data-reveal>
+        <p class="eyebrow">Financial Planning Support</p>
+        <h1>Protect Your Wealth. Preserve Your Wishes. Plan With Confidence.</h1>
+        <p>
+            East Street Foundation helps individuals and families prepare wills, trusts, and essential estate planning
+            documents with clarity, care, and professional guidance.
+        </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary hero-plan-btn" href="{{ url_for('start_plan') }}">Start Your Estate Plan</a>
+            <a class="btn btn-secondary btn-secondary-default-hover" href="{{ url_for('services') }}">View Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading" data-reveal>
+            <h2>Planning Made Simple</h2>
+            <p>
+                Financial planning does not have to feel overwhelming. Whether you need a basic will, a living trust,
+                or a complete family protection plan, East Street Foundation helps you take the next step with confidence.
+            </p>
+        </div>
+
+        <div class="card-grid grid-3">
+            <article class="card" data-reveal>
+                <h3>Wills</h3>
+                <p>Make your final wishes clear, name beneficiaries, and reduce confusion for your loved ones.</p>
+            </article>
+            <article class="card" data-reveal>
+                <h3>Trusts</h3>
+                <p>Create a plan for managing and transferring assets while helping your family avoid unnecessary delays.</p>
+            </article>
+            <article class="card" data-reveal>
+                <h3>Family Protection</h3>
+                <p>Prepare important documents that help protect your children, property, healthcare wishes, and legacy.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container split-layout">
+        <div data-reveal>
+            <h2>Without a plan, your family may be left with questions.</h2>
+            <p>
+                A will or trust can help reduce stress, prevent confusion, and make your wishes easier to follow.
+                The right documents can save your loved ones time, money, and emotional strain.
+            </p>
+            <ul class="feature-list">
+                <li>Reduce uncertainty</li>
+                <li>Protect children and loved ones</li>
+                <li>Help avoid unnecessary court delays</li>
+                <li>Make asset distribution clearer</li>
+                <li>Create peace of mind</li>
+            </ul>
+        </div>
+        <aside class="quote-card" data-reveal>
+            <p class="quote">"The best time to protect your family is before they need protection."</p>
+            <a class="btn btn-primary btn-primary-default-hover" href="{{ url_for('start_plan') }}">Request a Free Inquiry</a>
+        </aside>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading" data-reveal>
+            <h2>How It Works</h2>
+        </div>
+        <div class="card-grid grid-4 steps-grid">
+            <article class="card step-card" data-reveal>
+                <span class="step-number">1</span>
+                <h3>Submit an Inquiry</h3>
+                <p>Tell us who you are and what kind of planning help you need.</p>
+            </article>
+            <article class="card step-card" data-reveal>
+                <span class="step-number">2</span>
+                <h3>Complete Your Intake</h3>
+                <p>We collect the basic information needed to understand your goals.</p>
+            </article>
+            <article class="card step-card" data-reveal>
+                <span class="step-number">3</span>
+                <h3>Prepare Your Documents</h3>
+                <p>Your will, trust, or estate planning package is prepared based on your selected service.</p>
+            </article>
+            <article class="card step-card" data-reveal>
+                <span class="step-number">4</span>
+                <h3>Review &amp; Finalize</h3>
+                <p>You receive guidance on reviewing, signing, and storing your documents.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-heading" data-reveal>
+            <h2>Who We Help</h2>
+        </div>
+        <div class="card-grid grid-3">
+            <article class="card" data-reveal><h3>Investors</h3></article>
+            <article class="card" data-reveal><h3>Homeowners</h3></article>
+            <article class="card" data-reveal><h3>Families</h3></article>
+            <article class="card" data-reveal><h3>Small Business Owners</h3></article>
+            <article class="card" data-reveal><h3>Seniors</h3></article>
+            <article class="card" data-reveal><h3>Adults Without a Will</h3></article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading" data-reveal>
+            <h2>Pricing Preview</h2>
+        </div>
+        <div class="card-grid grid-3 pricing-preview">
+            <article class="card pricing-card" data-reveal>
+                <h3>Basic Will Package</h3>
+                <p class="price">Starting at $___</p>
+                <p>For straightforward will planning and clear documentation.</p>
+                <ul class="feature-list compact">
+                    <li>Basic will preparation</li>
+                    <li>Beneficiary information</li>
+                    <li>Signing guidance</li>
+                </ul>
+                <a class="btn btn-secondary" href="{{ url_for('start_plan') }}">Ask About This Package</a>
+            </article>
+            <article class="card pricing-card" data-reveal>
+                <h3>Living Trust Package</h3>
+                <p class="price">Starting at $___</p>
+                <p>For organized asset planning and smoother transfer support.</p>
+                <ul class="feature-list compact">
+                    <li>Trust creation support</li>
+                    <li>Trustee planning</li>
+                    <li>Asset checklist</li>
+                </ul>
+                <a class="btn btn-secondary" href="{{ url_for('start_plan') }}">Ask About This Package</a>
+            </article>
+            <article class="card pricing-card" data-reveal>
+                <h3>Complete Estate Plan</h3>
+                <p class="price">Starting at $___</p>
+                <p>For full family-focused estate planning in one organized process.</p>
+                <ul class="feature-list compact">
+                    <li>Will and trust support</li>
+                    <li>Healthcare and POA documents</li>
+                    <li>Review checklist</li>
+                </ul>
+                <a class="btn btn-secondary" href="{{ url_for('start_plan') }}">Ask About This Package</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container centered-copy" data-reveal>
+        <h2>Clear Documents. Clear Process. Greater Peace of Mind.</h2>
+        <p>
+            We believe estate planning should be understandable, respectful, and organized. If something is unclear,
+            we work with you to make the process easier to understand.
+        </p>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container centered-copy" data-reveal>
+        <h2>Ready to protect what matters most?</h2>
+        <p>Start with a simple inquiry. We will help you understand the next step.</p>
+        <a class="btn btn-primary btn-primary-default-hover" href="{{ url_for('start_plan') }}">Start Your Plan</a>
+    </div>
+</section>
+{% endblock %}

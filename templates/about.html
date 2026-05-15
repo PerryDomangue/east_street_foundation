@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}About East Street Foundation | Estate Planning Mission{% endblock %}
+{% block meta_description %}Learn about East Street Foundation and our mission to make wills, trusts, and legacy planning more approachable for families.{% endblock %}
+{% block og_title %}About East Street Foundation{% endblock %}
+{% block og_description %}Meet the values and mission behind East Street Foundation's family-focused planning approach.{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container" data-reveal>
+        <p class="eyebrow">Who We Are</p>
+        <h1>About East Street Foundation</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container split-layout about-layout">
+        <div class="about-image-wrap" data-reveal>
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="Owner portrait representing East Street Foundation" class="about-image">
+        </div>
+        <div data-reveal>
+            <h2>Our Story</h2>
+            <p>
+                East Street Foundation was created to help families take estate planning seriously before life forces difficult decisions.
+                Our mission is to make wills, trusts, and legacy planning feel more approachable, organized, and understandable.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container" data-reveal>
+        <h2>Our Mission</h2>
+        <p>
+            To help individuals and families protect their wishes, reduce confusion, and prepare important estate documents with confidence.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading" data-reveal>
+            <h2>Our Values</h2>
+        </div>
+        <div class="card-grid grid-5 value-grid">
+            <article class="card" data-reveal><h3>Clarity</h3></article>
+            <article class="card" data-reveal><h3>Respect</h3></article>
+            <article class="card" data-reveal><h3>Family Protection</h3></article>
+            <article class="card" data-reveal><h3>Professionalism</h3></article>
+            <article class="card" data-reveal><h3>Confidentiality</h3></article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container centered-copy" data-reveal>
+        <h2>Why We Do This</h2>
+        <p>
+            Too many families wait until there is a crisis. East Street Foundation exists to help people plan earlier,
+            communicate clearly, and protect the people they love.
+        </p>
+        <a class="btn btn-primary" href="{{ url_for('start_plan') }}">Schedule Your Inquiry</a>
+    </div>
+</section>
+{% endblock %}
